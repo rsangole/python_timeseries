@@ -1,0 +1,60 @@
+[project]
+name = "python-timeseries"
+version = "0.1.0"
+description = "A Python project for time series analysis using modern tools and libraries"
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "MIT"}
+authors = [
+    {name = "rsangole", email = "rahul.sangole@gmail.com"},
+]
+keywords = ["time-series", "data-analysis", "statistics"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Framework :: Jupyter",
+    "Framework :: Matplotlib",
+]
+dependencies = [
+    "pandas",
+    "numpy",
+    "statsmodels",
+    "scikit-learn",
+    "matplotlib",
+    "jupyter",
+    "sktime>=0.37.0",
+    "statsforecast>=2.0.1",
+    "mlforecast>=1.0.2",
+    "plotly>=6.0.1",
+    "polars-lts-cpu>=1.27.1",
+    "mlflow>=2.21.3",
+    "mlflavors>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "isort",
+    "mypy",
+    "ipykernel>=6.29.5",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
